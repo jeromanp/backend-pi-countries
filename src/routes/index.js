@@ -14,7 +14,7 @@ const url = "https://restcountries.com/v3/all";
 //funcion que me mostrara que valores quiero en la bdd
 const showApiValues = (array) => {
   return array.map((element) => {
-    return {
+return {
       id: element.cca3,
       name: element.name.common,
       continent: element.continents,
@@ -26,7 +26,9 @@ const showApiValues = (array) => {
       subregion: element.subregion,
       area: element.area,
       population: element.population,
-      created: false,
+      latitude:element.latlng,
+      timezones:element.timezones,
+      map:element.maps.googleMaps,
     };
   });
 };
