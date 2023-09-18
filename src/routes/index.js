@@ -14,7 +14,7 @@ const url = "https://restcountries.com/v3/all";
 //funcion que me mostrara que valores quiero en la bdd
 const showApiValues = (array) => {
   return array.map((element) => {
-return {
+    return {
       id: element.cca3,
       name: element.name.common,
       continent: element.continents,
@@ -32,22 +32,6 @@ return {
     };
   });
 };
-
-// let dataFetched = false;
-// //se busca que se ejecute una sola vez
-// const getDataApi = async () => {
-//   try {
-//     if (!dataFetched) {
-//       const dataApi = (await axios.get(url)).data;
-//       await Country.bulkCreate(showApiValues(dataApi));
-//       dataFetched = true;
-//       return dataApi;
-//     }
-//   } catch (error) {
-//     console.error(error);
-//   }
-// };
-// getDataApi()
 
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
